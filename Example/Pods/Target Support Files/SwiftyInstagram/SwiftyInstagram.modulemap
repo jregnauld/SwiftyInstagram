@@ -1,0 +1,6 @@
+framework module SwiftyInstagram {
+  umbrella header "SwiftyInstagram-umbrella.h"
+
+  export *
+  module * { export * }
+}

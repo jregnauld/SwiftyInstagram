@@ -1,0 +1,22 @@
+PODS:
+  - Nimble (3.2.0)
+  - Quick (0.9.2)
+  - SwiftyInstagram (0.1.0)
+
+DEPENDENCIES:
+  - Nimble (~> 3.0)
+  - Quick (~> 0.8)
+  - SwiftyInstagram (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyInstagram:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+  SwiftyInstagram: d4ac0fd4a9c94fa0b584cbcdb5519d91b540a23b
+
+PODFILE CHECKSUM: 8eb7fbc425466079320f6e8e1aa7085a33883b98
+
+COCOAPODS: 1.0.1
