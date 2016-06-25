@@ -1,3 +1,4 @@
+Currently in progress
 # SwiftyInstagram
 
 [![CI Status](http://img.shields.io/travis/Julien/SwiftyInstagram.svg?style=flat)](https://travis-ci.org/Julien/SwiftyInstagram)
