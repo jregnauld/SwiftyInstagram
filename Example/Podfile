@@ -5,9 +5,9 @@ target 'SwiftyInstagram_Example' do
 
   target 'SwiftyInstagram_Tests' do
     inherit! :search_paths
-
-    pod 'Quick', '~> 0.8'
-    pod 'Nimble', '~> 3.0'
+    pod 'SwiftyInstagram', :path => '../'
+    pod 'Quick', '~> 0.9.1'
+    pod 'Nimble', '3.2.0'
     pod 'OHHTTPStubs', '~> 5.1.0'
   end
 end

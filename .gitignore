@@ -19,6 +19,28 @@ DerivedData
 *.hmap
 *.ipa
 
+
+/Example/Pods/
+*/Example/.pbxuser
+/Example/!default.pbxuser
+*/Example/.mode1v3
+!default.mode1v3
+*/Example/.mode2v3
+/Example/!default.mode2v3
+*/Example/.perspectivev3
+!/Example/default.perspectivev3
+/Example/xcuserdata
+*/Example/.xccheckout
+*/Example/.moved-aside
+/Example/DerivedData
+*/Example/.hmap
+*/Example/.ipa
+*/Example/.xcuserstate
+/Example/.DS_Store
+
+
+
+
 # Bundler
 .bundle
 
