@@ -11,6 +11,7 @@ import SwiftyInstagram
 
 
 struct ConstantsTests {
-  static let secretID: String = "d19d4781a64a4c299158e29dc9a8c0a4"
+  static let clientID: String = "d19d4781a64a4c299158e29dc9a8c0a4"
   static let redirectURL = "http://jregnauld.ninja/"
+  static let authorizationURL = "https://api.instagram.com/oauth/authorize/"
 }

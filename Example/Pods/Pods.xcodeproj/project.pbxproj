@@ -71,7 +71,6 @@
 		775646739B95E828ECE349F6A39534F4 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08665FD5209C00C84358FCA86A4C78CC /* NimbleEnvironment.swift */; };
 		778065246F3F6107828E32A6BDBB12CC /* OHHTTPStubsMethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 210F03DF488406F04499C4D15D2A367F /* OHHTTPStubsMethodSwizzling.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		7BA5C54BC6BF8B5B67AA42B1ABBA5D38 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918FF775F5A81E1A4A817BFCD3140F9 /* Filter.swift */; };
-		7C11C583A0E0F00A278036AF505ECBFE /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420D4D3BB0B62F7E1AB2C2083CB022AC /* ReplaceMe.swift */; };
 		7C6AA05EB72FD07428588C0041B668FF /* NSBundle+CurrentTestBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CF4979F10DFE441B613670384DBFED /* NSBundle+CurrentTestBundle.swift */; };
 		7CC86ABC7F4135EE12A755B023F134CE /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4F3DD0F1899762C11D9646289980F8 /* AssertionDispatcher.swift */; };
 		7DC9B169B5FCC3EE99F6D36EC530FE1E /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569D6D814E763F19A72649213F132C48 /* Async.swift */; };
@@ -83,14 +82,12 @@
 		86FB708FCFE6121A82BB09E5ADD84554 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 81D551BD280CB058072BCF90F377E3E1 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		899A3B9C011E81154197DDA90E63B7F8 /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3378EA498E8CA207146E1DB59B532B /* ExampleMetadata.swift */; };
 		8B2EC45D966DB09D9F0B074B4984154C /* Pods-SwiftyInstagram_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0A4533AD399B4535685245FBF6C9E /* Pods-SwiftyInstagram_Example-dummy.m */; };
-		8C2FA3953B1BFCE56275D495EFAE319E /* SwiftyInstagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9818985B6F1CDF924B55252A99BB881 /* SwiftyInstagram.swift */; };
 		8FD0CDDFE6D62913E3780AFD650A04CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D5818B281F0F5733D4BD6F5EBC605F /* Foundation.framework */; };
 		917C77838C68E6F87560FEB04BFFFA75 /* QCKDSL.m in Sources */ = {isa = PBXBuildFile; fileRef = A2860D75949CF747644DE837F1568734 /* QCKDSL.m */; };
 		91E751881C43D9CF6A23C01B67444C8C /* NSString+QCKSelectorName.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DE63891C1E29132CA0601D1E1CDC77D /* NSString+QCKSelectorName.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		91ED5B067FCA3CBD48E3114672941051 /* MatcherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8888F470DA90C452EF9878B20EBA5E /* MatcherProtocols.swift */; };
 		96ED0CCA721955637A88FE0C9737EC56 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD1317F97E1F1FF20E0703BF3541B86 /* SourceLocation.swift */; };
 		96EEE9CEC92E3F1F3A3368326CDC429D /* OHPathHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = FC34B8D77368ACDDCEB1053344C42DAE /* OHPathHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98A1CF25C0D83973803A6AD3729D585D /* InstagramAuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C48A6F3569B0B64A60133479FAF14B2 /* InstagramAuthConfig.swift */; };
 		9B5DE58927557CE87968C051D2A1C47E /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14491FAC240AB1A0807A835769F22453 /* BeLogical.swift */; };
 		9C1D5C40FBE8222248294A7AFCDD8EEF /* SuiteHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B35AFA0D4AAD61EE04FA53E756E44F8 /* SuiteHooks.swift */; };
 		9F08F74CB8740CF0EFF26746EEB0C930 /* CurrentTestCaseTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEEA4C17577BB0BEB0A77FA940A3D3D /* CurrentTestCaseTracker.m */; };
@@ -111,7 +108,6 @@
 		D54213E63EEF1E46528B0D925E7259B7 /* ExampleHooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD38FB6A9C543FBA606A1D593CE2F8B /* ExampleHooks.swift */; };
 		D6FEC02A9CD815AF6AFC54D8E3182B19 /* QuickConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D35FE2F2455D8469C71BDD66870A331 /* QuickConfiguration.m */; };
 		D75EF2A05676F20C22F628A1A63880A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D5818B281F0F5733D4BD6F5EBC605F /* Foundation.framework */; };
-		D8BEE2C6140984F0A44FE3273CB553C8 /* SwiftyInstagramError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E1AC6BCD06D0B302B94FAA1E91179A /* SwiftyInstagramError.swift */; };
 		DCA54337E8687685A293CC24A97F936C /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9663547A3BB3320E8254EDD04D57D12 /* Contain.swift */; };
 		DF0216DBDE0084F6C87FE9275A4E9F0D /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B94A51E6541FF397D7BAE56BB09FE8E0 /* Nimble-dummy.m */; };
 		E6F6FF9554A6C7EABD6B92B691751DAD /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887182450863E88FF9ADD2CAAE77D51A /* BeLessThanOrEqual.swift */; };
@@ -122,6 +118,8 @@
 		EE6DD0F93BC7B01ACC98716003D129B7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348E28395AC3E9B59263F66C9B316799 /* XCTest.framework */; };
 		F417E510B10A4D64D47E463ED031693D /* SwiftyInstagram-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B8DAB48B9D716D296510D32257B17A /* SwiftyInstagram-dummy.m */; };
 		F85A9207A8601CE7F835CEC56790616F /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B90121770E22DA0C8AE43757DC827 /* Expectation.swift */; };
+		F95008171D58CA6F00307337 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95008101D58C82F00307337 /* Client.swift */; };
+		F95008181D58CA7200307337 /* SwiftyInstagramConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95008151D58CA6700307337 /* SwiftyInstagramConstants.swift */; };
 		FB09A16A6662F2689D4AA89538DBF1C1 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF9013EEC715D4416C85C4E86B841E /* BeAKindOf.swift */; };
 		FD7236D12581C74A9ABAF0BDE5096308 /* OHHTTPStubsResponse+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = D88942AD451327A608B2514F145266D6 /* OHHTTPStubsResponse+JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -183,7 +181,6 @@
 		1B35AFA0D4AAD61EE04FA53E756E44F8 /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		1BFE16B4EE42CD0CF2FB0D4E8278B8F0 /* HaveCount.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HaveCount.swift; path = Sources/Nimble/Matchers/HaveCount.swift; sourceTree = "<group>"; };
 		1D4EE14D1187DE981DD8FE61DD942217 /* NSURLRequest+HTTPBodyTesting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+HTTPBodyTesting.m"; path = "OHHTTPStubs/Sources/NSURLSession/NSURLRequest+HTTPBodyTesting.m"; sourceTree = "<group>"; };
-		20E1AC6BCD06D0B302B94FAA1E91179A /* SwiftyInstagramError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftyInstagramError.swift; sourceTree = "<group>"; };
 		210F03DF488406F04499C4D15D2A367F /* OHHTTPStubsMethodSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OHHTTPStubsMethodSwizzling.m; path = OHHTTPStubs/Sources/NSURLSession/OHHTTPStubsMethodSwizzling.m; sourceTree = "<group>"; };
 		21B8DAB48B9D716D296510D32257B17A /* SwiftyInstagram-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyInstagram-dummy.m"; sourceTree = "<group>"; };
 		24548344E2F1920452FF6E08534E0B60 /* Quick-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-umbrella.h"; sourceTree = "<group>"; };
@@ -202,7 +199,6 @@
 		3DE3886C189079138F53246BDC92C5EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		405821E75C9A1C08B597DAD9343E6288 /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Sources/Nimble/Wrappers/MatcherFunc.swift; sourceTree = "<group>"; };
 		41A8EB1930E4B069FA6FD530BA456A4E /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Sources/Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
-		420D4D3BB0B62F7E1AB2C2083CB022AC /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		4385E56F1D4844A788B0CE3800A4889A /* QuickSelectedTestSuiteBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickSelectedTestSuiteBuilder.swift; path = Sources/Quick/QuickSelectedTestSuiteBuilder.swift; sourceTree = "<group>"; };
 		44E12A29060D748739FE364B2E717489 /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
 		45CDC7906C90D5A7268CC9142CBE5D4E /* Pods-SwiftyInstagram_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SwiftyInstagram_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -238,7 +234,6 @@
 		76704EAC3D46F184AADB94E48752F3AF /* Pods-SwiftyInstagram_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyInstagram_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		775AAB305FE52565817954003287ACF9 /* QuickConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QuickConfiguration.h; path = Sources/Quick/Configuration/QuickConfiguration.h; sourceTree = "<group>"; };
 		79A2AF55229FAEF402639B9906C74FA1 /* BeAnInstanceOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAnInstanceOf.swift; path = Sources/Nimble/Matchers/BeAnInstanceOf.swift; sourceTree = "<group>"; };
-		7C48A6F3569B0B64A60133479FAF14B2 /* InstagramAuthConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InstagramAuthConfig.swift; sourceTree = "<group>"; };
 		7E9ED03BABC8D290D5F9080275CEADDD /* Pods-SwiftyInstagram_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SwiftyInstagram_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7FD4782E0EA9FF9C43CB293A436E8469 /* QuickTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestSuite.swift; path = Sources/Quick/QuickTestSuite.swift; sourceTree = "<group>"; };
 		81D551BD280CB058072BCF90F377E3E1 /* NMBExceptionCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NMBExceptionCapture.h; path = Sources/Nimble/objc/NMBExceptionCapture.h; sourceTree = "<group>"; };
@@ -291,7 +286,6 @@
 		D4939AF3F089A7557DAC9E2A5CA5206C /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Sources/Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
 		D88942AD451327A608B2514F145266D6 /* OHHTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OHHTTPStubsResponse+JSON.h"; path = "OHHTTPStubs/Sources/JSON/OHHTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
 		D918FF775F5A81E1A4A817BFCD3140F9 /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Quick/Filter.swift; sourceTree = "<group>"; };
-		D9818985B6F1CDF924B55252A99BB881 /* SwiftyInstagram.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SwiftyInstagram.swift; sourceTree = "<group>"; };
 		D9980F0CF76FD1F9783CAE164180BFDB /* NSURLRequest+HTTPBodyTesting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+HTTPBodyTesting.h"; path = "OHHTTPStubs/Sources/NSURLSession/NSURLRequest+HTTPBodyTesting.h"; sourceTree = "<group>"; };
 		E513C3C48BB1753D6008D5E5C9EC8818 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
 		E692309FCF767C866FA463017BDA3DD7 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +305,8 @@
 		F5FA2D428AF5721E469C17897FC776F0 /* OHHTTPStubs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-umbrella.h"; sourceTree = "<group>"; };
 		F605D2CC2263E264598B09EC5E6AA573 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F18E1EFE7789EEA87EE58CA4FFBB27 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F95008101D58C82F00307337 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = Domain/Client.swift; sourceTree = "<group>"; };
+		F95008151D58CA6700307337 /* SwiftyInstagramConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyInstagramConstants.swift; path = Constants/SwiftyInstagramConstants.swift; sourceTree = "<group>"; };
 		FB369547F656A5827409EBDD6C04B237 /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
 		FB3EA8830022CFBD2E872CF60CCBDB4D /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
 		FC34B8D77368ACDDCEB1053344C42DAE /* OHPathHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHPathHelpers.h; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.h; sourceTree = "<group>"; };
@@ -426,10 +422,8 @@
 		1F2CEA0CC57BF56B649A0F1753AE99D5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7C48A6F3569B0B64A60133479FAF14B2 /* InstagramAuthConfig.swift */,
-				420D4D3BB0B62F7E1AB2C2083CB022AC /* ReplaceMe.swift */,
-				D9818985B6F1CDF924B55252A99BB881 /* SwiftyInstagram.swift */,
-				20E1AC6BCD06D0B302B94FAA1E91179A /* SwiftyInstagramError.swift */,
+				F95008141D58CA3F00307337 /* Constants */,
+				F950080F1D58C80B00307337 /* Domain */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -696,6 +690,22 @@
 			);
 			name = "Pods-SwiftyInstagram_Example";
 			path = "Target Support Files/Pods-SwiftyInstagram_Example";
+			sourceTree = "<group>";
+		};
+		F950080F1D58C80B00307337 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F95008101D58C82F00307337 /* Client.swift */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		F95008141D58CA3F00307337 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F95008151D58CA6700307337 /* SwiftyInstagramConstants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		FBAF5BB6F43A53CBEFC3FBF1891F7D18 /* Support Files */ = {
@@ -1011,11 +1021,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98A1CF25C0D83973803A6AD3729D585D /* InstagramAuthConfig.swift in Sources */,
-				7C11C583A0E0F00A278036AF505ECBFE /* ReplaceMe.swift in Sources */,
+				F95008171D58CA6F00307337 /* Client.swift in Sources */,
+				F95008181D58CA7200307337 /* SwiftyInstagramConstants.swift in Sources */,
 				F417E510B10A4D64D47E463ED031693D /* SwiftyInstagram-dummy.m in Sources */,
-				8C2FA3953B1BFCE56275D495EFAE319E /* SwiftyInstagram.swift in Sources */,
-				D8BEE2C6140984F0A44FE3273CB553C8 /* SwiftyInstagramError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
