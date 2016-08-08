@@ -120,6 +120,8 @@
 		F85A9207A8601CE7F835CEC56790616F /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B90121770E22DA0C8AE43757DC827 /* Expectation.swift */; };
 		F95008171D58CA6F00307337 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95008101D58C82F00307337 /* Client.swift */; };
 		F95008181D58CA7200307337 /* SwiftyInstagramConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95008151D58CA6700307337 /* SwiftyInstagramConstants.swift */; };
+		F950081B1D58D30700307337 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95008191D58D28200307337 /* Configuration.swift */; };
+		F950081D1D58D45500307337 /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950081C1D58D45500307337 /* Scope.swift */; };
 		FB09A16A6662F2689D4AA89538DBF1C1 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF9013EEC715D4416C85C4E86B841E /* BeAKindOf.swift */; };
 		FD7236D12581C74A9ABAF0BDE5096308 /* OHHTTPStubsResponse+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = D88942AD451327A608B2514F145266D6 /* OHHTTPStubsResponse+JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -307,6 +309,8 @@
 		F8F18E1EFE7789EEA87EE58CA4FFBB27 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F95008101D58C82F00307337 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = Domain/Client.swift; sourceTree = "<group>"; };
 		F95008151D58CA6700307337 /* SwiftyInstagramConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyInstagramConstants.swift; path = Constants/SwiftyInstagramConstants.swift; sourceTree = "<group>"; };
+		F95008191D58D28200307337 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Domain/Configuration.swift; sourceTree = "<group>"; };
+		F950081C1D58D45500307337 /* Scope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scope.swift; path = Domain/Scope.swift; sourceTree = "<group>"; };
 		FB369547F656A5827409EBDD6C04B237 /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
 		FB3EA8830022CFBD2E872CF60CCBDB4D /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
 		FC34B8D77368ACDDCEB1053344C42DAE /* OHPathHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHPathHelpers.h; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.h; sourceTree = "<group>"; };
@@ -696,6 +700,7 @@
 			isa = PBXGroup;
 			children = (
 				F95008101D58C82F00307337 /* Client.swift */,
+				F95008191D58D28200307337 /* Configuration.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -704,6 +709,7 @@
 			isa = PBXGroup;
 			children = (
 				F95008151D58CA6700307337 /* SwiftyInstagramConstants.swift */,
+				F950081C1D58D45500307337 /* Scope.swift */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -1023,7 +1029,9 @@
 			files = (
 				F95008171D58CA6F00307337 /* Client.swift in Sources */,
 				F95008181D58CA7200307337 /* SwiftyInstagramConstants.swift in Sources */,
+				F950081B1D58D30700307337 /* Configuration.swift in Sources */,
 				F417E510B10A4D64D47E463ED031693D /* SwiftyInstagram-dummy.m in Sources */,
+				F950081D1D58D45500307337 /* Scope.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

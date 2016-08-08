@@ -15,7 +15,6 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		D64F6989CEC966A4ACD53311 /* Pods_SwiftyInstagram_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED41ED648B24A5ADAF191FE3 /* Pods_SwiftyInstagram_Tests.framework */; };
 		F94149DC1D3D371B00D42337 /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94149DA1D3D36C300D42337 /* ConstantsTests.swift */; };
-		F950080E1D58C76600307337 /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950080C1D58C6DA00307337 /* ClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		EB842CAFA4CBB4474733B273 /* Pods-SwiftyInstagram_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyInstagram_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftyInstagram_Example/Pods-SwiftyInstagram_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ED41ED648B24A5ADAF191FE3 /* Pods_SwiftyInstagram_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftyInstagram_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94149DA1D3D36C300D42337 /* ConstantsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstantsTests.swift; path = Helpers/ConstantsTests.swift; sourceTree = "<group>"; };
-		F950080C1D58C6DA00307337 /* ClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientTests.swift; path = Domain/ClientTests.swift; sourceTree = "<group>"; };
 		F95237D91D3D509000D8BF55 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftyInstagram-gftvssfostufcdgxaonmserrjhje/Build/Products/Debug-iphonesimulator/Nimble/Nimble.framework"; sourceTree = "<group>"; };
 		F95237DA1D3D509000D8BF55 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftyInstagram-gftvssfostufcdgxaonmserrjhje/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		F95237DB1D3D509000D8BF55 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftyInstagram-gftvssfostufcdgxaonmserrjhje/Build/Products/Debug-iphonesimulator/Quick/Quick.framework"; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 		F950080B1D58C6AC00307337 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				F950080C1D58C6DA00307337 /* ClientTests.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -393,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F950080E1D58C76600307337 /* ClientTests.swift in Sources */,
 				F94149DC1D3D371B00D42337 /* ConstantsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
