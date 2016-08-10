@@ -22,4 +22,9 @@ public struct Configuration {
       self.parameters = [Scope]()
     }
   }
+  public func authorizationParameters() -> [String: String] {
+    return ["client_id": self.client.clientID,
+            "redirect_uri": self.client.redirectURL,
+            "response_type": "token"]
+  }
 }
