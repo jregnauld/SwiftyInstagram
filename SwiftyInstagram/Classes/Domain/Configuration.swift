@@ -36,6 +36,5 @@ public struct Configuration {
             "redirect_uri": self.client.redirectURL,
             "response_type": "token",
             "scope": scopeValues]
-    
   }
 }
