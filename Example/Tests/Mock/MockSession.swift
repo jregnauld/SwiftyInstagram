@@ -9,9 +9,8 @@
 import Foundation
 import SwiftyInstagram
 
-private var _mockSharedSession: MockSession?
-
-class MockSession: Session {
+private var _mockSharedSession: TwiceSession?
+class TwiceSession: Session {
   var calledTwice: Bool
   override init(configuration: Configuration) {
     self.calledTwice = false
@@ -19,9 +18,9 @@ class MockSession: Session {
   }
   override class func setupSharedSessionWithConfiguration(configuration: Configuration) {
     if _mockSharedSession == nil {
-      _mockSharedSession = MockSession(configuration: configuration)
+      _mockSharedSession = TwiceSession(configuration: configuration)
     } else {
-      (self.sharedSession() as! MockSession).calledTwice = true
+      (self.sharedSession() as! TwiceSession).calledTwice = true
     }
   }
   override class func sharedSession()-> Session {
@@ -30,7 +29,6 @@ class MockSession: Session {
 }
 
 private var _emptySharedSession: EmtpyMockSession?
-
 class EmtpyMockSession: Session {
   var emptySharedSession: Bool
   override init(configuration: Configuration) {
@@ -40,7 +38,7 @@ class EmtpyMockSession: Session {
   override class func setupSharedSessionWithConfiguration(configuration: Configuration) {
   }
   override class func sharedSession()-> Session {
-    guard let emptySharedSession = _emptySharedSession else {
+    guard _emptySharedSession != nil else {
         _emptySharedSession = EmtpyMockSession(configuration: Configuration(client: Client(clientID: "", redirectURL: "")))
         _emptySharedSession!.emptySharedSession = true
       return _emptySharedSession!
