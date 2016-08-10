@@ -32,6 +32,9 @@ public class Session {
     }
   }
   public class func sharedSession()-> Session {
-    return _sharedSession!
+    guard let sharedSession = _sharedSession else {
+      fatalError("please call setupSharedSessionWithConfiguration to setup the session")
+    }
+    return sharedSession
   }
 }

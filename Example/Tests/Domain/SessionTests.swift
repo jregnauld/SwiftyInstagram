@@ -30,6 +30,10 @@ class SessionTests: QuickSpec {
         MockSession.setupSharedSessionWithConfiguration(configuration2)
         expect((MockSession.sharedSession() as! MockSession).calledTwice).to(beTrue())
       }
+      it("make sure that we can't call sharedSession before setupSharedSessionWithConfiguration"){
+        expect((EmtpyMockSession.sharedSession() as! EmtpyMockSession).emptySharedSession).to(beTrue())
+      }
+      
     }
   }
 }

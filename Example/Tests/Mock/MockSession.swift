@@ -28,3 +28,23 @@ class MockSession: Session {
     return _mockSharedSession!
   }
 }
+
+private var _emptySharedSession: EmtpyMockSession?
+
+class EmtpyMockSession: Session {
+  var emptySharedSession: Bool
+  override init(configuration: Configuration) {
+    self.emptySharedSession = false
+    super.init(configuration: configuration)
+  }
+  override class func setupSharedSessionWithConfiguration(configuration: Configuration) {
+  }
+  override class func sharedSession()-> Session {
+    guard let emptySharedSession = _emptySharedSession else {
+        _emptySharedSession = EmtpyMockSession(configuration: Configuration(client: Client(clientID: "", redirectURL: "")))
+        _emptySharedSession!.emptySharedSession = true
+      return _emptySharedSession!
+    }
+    return Session(configuration: Configuration(client: Client(clientID: "", redirectURL: "")))
+  }
+}
