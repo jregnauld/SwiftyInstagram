@@ -21,11 +21,15 @@ public class Session {
     authorizationURLComponents?.queryItems = params
     return authorizationURLComponents!.URL!
   }()
-  private init(configuration: Configuration) {
+  public init(configuration: Configuration) {
     self.configuration = configuration
   }
   public class func setupSharedSessionWithConfiguration(configuration: Configuration) {
-    _sharedSession = Session(configuration: configuration)
+    if _sharedSession == nil {
+      _sharedSession = Session(configuration: configuration)
+    } else {
+      fatalError("Do not call twice setupSharedSessionWithConfiguration")
+    }
   }
   public class func sharedSession()-> Session {
     return _sharedSession!

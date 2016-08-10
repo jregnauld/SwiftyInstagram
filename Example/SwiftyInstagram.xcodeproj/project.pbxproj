@@ -16,6 +16,7 @@
 		D64F6989CEC966A4ACD53311 /* Pods_SwiftyInstagram_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED41ED648B24A5ADAF191FE3 /* Pods_SwiftyInstagram_Tests.framework */; };
 		F94149DC1D3D371B00D42337 /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94149DA1D3D36C300D42337 /* ConstantsTests.swift */; };
 		F977151D1D5B565A00ECE9FD /* SessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F977151C1D5B565A00ECE9FD /* SessionTests.swift */; };
+		F97715221D5B716E00ECE9FD /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97715211D5B716E00ECE9FD /* MockSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		F95237DA1D3D509000D8BF55 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftyInstagram-gftvssfostufcdgxaonmserrjhje/Build/Products/Debug-iphonesimulator/OHHTTPStubs/OHHTTPStubs.framework"; sourceTree = "<group>"; };
 		F95237DB1D3D509000D8BF55 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftyInstagram-gftvssfostufcdgxaonmserrjhje/Build/Products/Debug-iphonesimulator/Quick/Quick.framework"; sourceTree = "<group>"; };
 		F977151C1D5B565A00ECE9FD /* SessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionTests.swift; path = Domain/SessionTests.swift; sourceTree = "<group>"; };
+		F97715211D5B716E00ECE9FD /* MockSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockSession.swift; path = Mock/MockSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F97715201D5B715600ECE9FD /* Mock */,
 				F950080B1D58C6AC00307337 /* Domain */,
 				F94149D91D3D368E00D42337 /* Helpers */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
@@ -182,6 +185,14 @@
 				F977151C1D5B565A00ECE9FD /* SessionTests.swift */,
 			);
 			name = Domain;
+			sourceTree = "<group>";
+		};
+		F97715201D5B715600ECE9FD /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				F97715211D5B716E00ECE9FD /* MockSession.swift */,
+			);
+			name = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97715221D5B716E00ECE9FD /* MockSession.swift in Sources */,
 				F977151D1D5B565A00ECE9FD /* SessionTests.swift in Sources */,
 				F94149DC1D3D371B00D42337 /* ConstantsTests.swift in Sources */,
 			);
