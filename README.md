@@ -2,7 +2,7 @@ Currently in progress
 
 # SwiftyInstagram
 
-[![CI Status](http://img.shields.io/travis/Julien/SwiftyInstagram.svg?style=flat)](https://travis-ci.org/Julien/SwiftyInstagram)
+[![Build Status](https://travis-ci.org/jregnauld/SwiftyInstagram.svg?branch=master)](https://travis-ci.org/jregnauld/SwiftyInstagram)
 [![Version](https://img.shields.io/cocoapods/v/SwiftyInstagram.svg?style=flat)](http://cocoapods.org/pods/SwiftyInstagram)
 [![License](https://img.shields.io/cocoapods/l/SwiftyInstagram.svg?style=flat)](http://cocoapods.org/pods/SwiftyInstagram)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyInstagram.svg?style=flat)](http://cocoapods.org/pods/SwiftyInstagram)
