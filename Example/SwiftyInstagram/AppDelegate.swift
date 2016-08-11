@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SwiftyInstagram
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        let client = Client.init(clientID: "d19d4781a64a4c299158e29dc9a8c0a4", redirectURL: "http://jregnauld.ninja/")
+        let configuration = Configuration(client: client)
+        Session.setupSharedSessionWithConfiguration(configuration)
         return true
     }
 

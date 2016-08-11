@@ -17,6 +17,7 @@
 		F94149DC1D3D371B00D42337 /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94149DA1D3D36C300D42337 /* ConstantsTests.swift */; };
 		F977151D1D5B565A00ECE9FD /* SessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F977151C1D5B565A00ECE9FD /* SessionTests.swift */; };
 		F97715221D5B716E00ECE9FD /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97715211D5B716E00ECE9FD /* MockSession.swift */; };
+		F97ED27F1D5CBC8E00A67470 /* LoginManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97ED27D1D5CBC8100A67470 /* LoginManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		F95237DB1D3D509000D8BF55 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftyInstagram-gftvssfostufcdgxaonmserrjhje/Build/Products/Debug-iphonesimulator/Quick/Quick.framework"; sourceTree = "<group>"; };
 		F977151C1D5B565A00ECE9FD /* SessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionTests.swift; path = Domain/SessionTests.swift; sourceTree = "<group>"; };
 		F97715211D5B716E00ECE9FD /* MockSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockSession.swift; path = Mock/MockSession.swift; sourceTree = "<group>"; };
+		F97ED27D1D5CBC8100A67470 /* LoginManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManagerTests.swift; path = Manager/LoginManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +124,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F97715201D5B715600ECE9FD /* Mock */,
+				F97ED27C1D5CBC5800A67470 /* Manager */,
 				F950080B1D58C6AC00307337 /* Domain */,
+				F97715201D5B715600ECE9FD /* Mock */,
 				F94149D91D3D368E00D42337 /* Helpers */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -193,6 +196,14 @@
 				F97715211D5B716E00ECE9FD /* MockSession.swift */,
 			);
 			name = Mock;
+			sourceTree = "<group>";
+		};
+		F97ED27C1D5CBC5800A67470 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F97ED27D1D5CBC8100A67470 /* LoginManagerTests.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F97715221D5B716E00ECE9FD /* MockSession.swift in Sources */,
+				F97ED27F1D5CBC8E00A67470 /* LoginManagerTests.swift in Sources */,
 				F977151D1D5B565A00ECE9FD /* SessionTests.swift in Sources */,
 				F94149DC1D3D371B00D42337 /* ConstantsTests.swift in Sources */,
 			);
@@ -477,7 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -515,7 +527,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -561,6 +573,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -576,6 +589,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

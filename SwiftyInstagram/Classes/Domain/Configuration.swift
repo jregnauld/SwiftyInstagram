@@ -25,7 +25,7 @@ public struct Configuration {
               "response_type": "token"]
     }
     var scopeValues: String = ""
-   parameters.enumerate().map({ (index, element) in
+    parameters.enumerate().map({ (index, element) in
             if index == 0 {
               scopeValues +=  element.rawValue
             } else {

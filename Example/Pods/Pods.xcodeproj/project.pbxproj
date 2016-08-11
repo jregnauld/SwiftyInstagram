@@ -123,6 +123,8 @@
 		F950081B1D58D30700307337 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95008191D58D28200307337 /* Configuration.swift */; };
 		F950081D1D58D45500307337 /* Scope.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950081C1D58D45500307337 /* Scope.swift */; };
 		F977151F1D5B5B1400ECE9FD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F977151E1D5B5B1400ECE9FD /* Session.swift */; };
+		F97ED2811D5CBCFB00A67470 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97ED2801D5CBCFB00A67470 /* LoginManager.swift */; };
+		F97ED2841D5CBDB400A67470 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97ED2831D5CBDB400A67470 /* AuthorizationViewController.swift */; };
 		FB09A16A6662F2689D4AA89538DBF1C1 /* BeAKindOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF9013EEC715D4416C85C4E86B841E /* BeAKindOf.swift */; };
 		FD7236D12581C74A9ABAF0BDE5096308 /* OHHTTPStubsResponse+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = D88942AD451327A608B2514F145266D6 /* OHHTTPStubsResponse+JSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -313,6 +315,8 @@
 		F95008191D58D28200307337 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Domain/Configuration.swift; sourceTree = "<group>"; };
 		F950081C1D58D45500307337 /* Scope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scope.swift; path = Domain/Scope.swift; sourceTree = "<group>"; };
 		F977151E1D5B5B1400ECE9FD /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Domain/Session.swift; sourceTree = "<group>"; };
+		F97ED2801D5CBCFB00A67470 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManager.swift; path = Manager/LoginManager.swift; sourceTree = "<group>"; };
+		F97ED2831D5CBDB400A67470 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthorizationViewController.swift; path = Controller/AuthorizationViewController.swift; sourceTree = "<group>"; };
 		FB369547F656A5827409EBDD6C04B237 /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
 		FB3EA8830022CFBD2E872CF60CCBDB4D /* World.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = World.swift; path = Sources/Quick/World.swift; sourceTree = "<group>"; };
 		FC34B8D77368ACDDCEB1053344C42DAE /* OHPathHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OHPathHelpers.h; path = OHHTTPStubs/Sources/OHPathHelpers/OHPathHelpers.h; sourceTree = "<group>"; };
@@ -428,6 +432,8 @@
 		1F2CEA0CC57BF56B649A0F1753AE99D5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F97ED2821D5CBD8500A67470 /* Controller */,
+				F97ED27B1D5CBC4200A67470 /* Manager */,
 				F95008141D58CA3F00307337 /* Constants */,
 				F950080F1D58C80B00307337 /* Domain */,
 			);
@@ -715,6 +721,22 @@
 				F950081C1D58D45500307337 /* Scope.swift */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		F97ED27B1D5CBC4200A67470 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F97ED2801D5CBCFB00A67470 /* LoginManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		F97ED2821D5CBD8500A67470 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F97ED2831D5CBDB400A67470 /* AuthorizationViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		FBAF5BB6F43A53CBEFC3FBF1891F7D18 /* Support Files */ = {
@@ -1032,7 +1054,9 @@
 			files = (
 				F95008171D58CA6F00307337 /* Client.swift in Sources */,
 				F95008181D58CA7200307337 /* SwiftyInstagramConstants.swift in Sources */,
+				F97ED2811D5CBCFB00A67470 /* LoginManager.swift in Sources */,
 				F977151F1D5B5B1400ECE9FD /* Session.swift in Sources */,
+				F97ED2841D5CBDB400A67470 /* AuthorizationViewController.swift in Sources */,
 				F950081B1D58D30700307337 /* Configuration.swift in Sources */,
 				F417E510B10A4D64D47E463ED031693D /* SwiftyInstagram-dummy.m in Sources */,
 				F950081D1D58D45500307337 /* Scope.swift in Sources */,
@@ -1224,7 +1248,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyInstagram/SwiftyInstagram-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyInstagram/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyInstagram/SwiftyInstagram.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1287,7 +1311,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SwiftyInstagram/SwiftyInstagram-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SwiftyInstagram/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyInstagram/SwiftyInstagram.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
