@@ -12,7 +12,14 @@ class ViewController: UIViewController {
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     let loginManager = LoginManager()
-    loginManager.loginFromViewController(self)
+    loginManager.loginFromViewController(self) { (result) in
+      switch result {
+      case .Success():
+        print("pouet")
+        break
+      case .Failure(): break
+      }
+    }
   }
     override func viewDidLoad() {
         super.viewDidLoad()

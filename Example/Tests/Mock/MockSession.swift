@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyInstagram
 
-private var _mockSharedSession: TwiceSession?
+private var _twiceSharedSession: TwiceSession?
 class TwiceSession: Session {
   var calledTwice: Bool
   override init(configuration: Configuration) {
@@ -17,14 +17,14 @@ class TwiceSession: Session {
     super.init(configuration: configuration)
   }
   override class func setupSharedSessionWithConfiguration(configuration: Configuration) {
-    if _mockSharedSession == nil {
-      _mockSharedSession = TwiceSession(configuration: configuration)
+    if _twiceSharedSession == nil {
+      _twiceSharedSession = TwiceSession(configuration: configuration)
     } else {
       (self.sharedSession() as! TwiceSession).calledTwice = true
     }
   }
   override class func sharedSession()-> Session {
-    return _mockSharedSession!
+    return _twiceSharedSession!
   }
 }
 
@@ -44,5 +44,18 @@ class EmtpyMockSession: Session {
       return _emptySharedSession!
     }
     return Session(configuration: Configuration(client: Client(clientID: "", redirectURL: "")))
+  }
+}
+private var _mockSharedSession: Session?
+
+class MockSession: Session {
+  override class func setupSharedSessionWithConfiguration(configuration: Configuration) {
+    _mockSharedSession = Session(configuration: configuration)
+  }
+  override class func sharedSession()-> Session {
+    return _mockSharedSession!
+  }
+  class func destroy() {
+    _twiceSharedSession = nil
   }
 }

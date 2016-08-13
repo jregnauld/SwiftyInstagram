@@ -9,12 +9,14 @@
 import Foundation
 import UIKit
 import WebKit
-
-class AuthorizationViewController: UIViewController, WKNavigationDelegate {
+protocol AuthorizationDelegate {
+  func getWebViewAnswer(url:NSURL)
+}
+public class AuthorizationViewController: UIViewController, WKNavigationDelegate {
   let webView: WKWebView = WKWebView()
   let request: NSURLRequest
-  internal init(_ coder: NSCoder? = nil, authorizationURL: NSURL) {
-    print(authorizationURL)
+  var delegate: AuthorizationDelegate?
+  public init(_ coder: NSCoder? = nil, authorizationURL: NSURL) {
     self.request = NSURLRequest(URL: authorizationURL)
     if let coder = coder {
       super.init(coder: coder)!
@@ -25,11 +27,11 @@ class AuthorizationViewController: UIViewController, WKNavigationDelegate {
   required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  override func viewDidAppear(animated: Bool) {
+  override public func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     self.webView.loadRequest(request)
   }
-  override func viewDidLoad() {
+  override public func viewDidLoad() {
     super.viewDidLoad()
     self.webView.navigationDelegate = self
     self.webView.translatesAutoresizingMaskIntoConstraints = false
@@ -39,14 +41,18 @@ class AuthorizationViewController: UIViewController, WKNavigationDelegate {
     self.webView.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
     self.webView.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
   }
-  func webView(webView: WKWebView, didCommitNavigation navigation: WKNavigation!) {
+  public func webView(webView: WKWebView, didCommitNavigation navigation: WKNavigation!) {
     print("didCommitNavigation")
   }
-  func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+  public func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
     print("didFinishNavigation")
   }
-  func webView(webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
-    print("didReceiveServerRedirectForProvisionalNavigation")
-    print(webView.URL)
+  public func webView(webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+    if let url = webView.URL {
+      self.getWebViewURL(url)
+    }
+  }
+  public func getWebViewURL(url: NSURL) {
+    self.delegate?.getWebViewAnswer(url)
   }
 }

@@ -12,6 +12,7 @@ private var _sharedSession: Session?
 
 public class Session {
   let configuration: Configuration
+  var accessToken: String?
   public lazy var authorizationURL: NSURL = {
     var authorizationURLComponents = NSURLComponents(string: SwiftyInstagramConstants.authorizationURL)
     var params = [NSURLQueryItem]()
@@ -20,6 +21,9 @@ public class Session {
     }
     authorizationURLComponents?.queryItems = params
     return authorizationURLComponents!.URL!
+  }()
+  public lazy var redirectURL: String = {
+    return self.configuration.client.redirectURL
   }()
   public init(configuration: Configuration) {
     self.configuration = configuration

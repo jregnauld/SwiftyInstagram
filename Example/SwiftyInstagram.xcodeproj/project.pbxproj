@@ -18,6 +18,7 @@
 		F977151D1D5B565A00ECE9FD /* SessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F977151C1D5B565A00ECE9FD /* SessionTests.swift */; };
 		F97715221D5B716E00ECE9FD /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97715211D5B716E00ECE9FD /* MockSession.swift */; };
 		F97ED27F1D5CBC8E00A67470 /* LoginManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97ED27D1D5CBC8100A67470 /* LoginManagerTests.swift */; };
+		F97ED2871D5F80D600A67470 /* MockAuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97ED2851D5F784900A67470 /* MockAuthorizationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		F977151C1D5B565A00ECE9FD /* SessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionTests.swift; path = Domain/SessionTests.swift; sourceTree = "<group>"; };
 		F97715211D5B716E00ECE9FD /* MockSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockSession.swift; path = Mock/MockSession.swift; sourceTree = "<group>"; };
 		F97ED27D1D5CBC8100A67470 /* LoginManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginManagerTests.swift; path = Manager/LoginManagerTests.swift; sourceTree = "<group>"; };
+		F97ED2851D5F784900A67470 /* MockAuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockAuthorizationViewController.swift; path = Mock/MockAuthorizationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				F97715211D5B716E00ECE9FD /* MockSession.swift */,
+				F97ED2851D5F784900A67470 /* MockAuthorizationViewController.swift */,
 			);
 			name = Mock;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 6UZ78BJ56F;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -415,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97ED2871D5F80D600A67470 /* MockAuthorizationViewController.swift in Sources */,
 				F97715221D5B716E00ECE9FD /* MockSession.swift in Sources */,
 				F97ED27F1D5CBC8E00A67470 /* LoginManagerTests.swift in Sources */,
 				F977151D1D5B565A00ECE9FD /* SessionTests.swift in Sources */,
@@ -539,11 +544,14 @@
 			baseConfigurationReference = BCFB467921C0FD3E4ABC826F /* Pods-SwiftyInstagram_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftyInstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -552,11 +560,14 @@
 			baseConfigurationReference = EB842CAFA4CBB4474733B273 /* Pods-SwiftyInstagram_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftyInstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

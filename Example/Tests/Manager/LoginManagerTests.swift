@@ -13,9 +13,28 @@ import Nimble
 
 class LoginManagerTests: QuickSpec {
   override func spec() {
+    beforeEach {
+      let client = Client(clientID: "toto", redirectURL: "http://toto.com/titi")
+      let configuration = Configuration(client: client)
+      MockSession.setupSharedSessionWithConfiguration(configuration)
+    }
+    afterEach{
+      MockSession.destroy()
+    }
     describe("it will test Login manager") {
-      let loginManager = LoginManager()
-      loginManager.loginFromViewController(UIViewController())
+      it(" will log in to Instagram with success") {
+        let loginManager = LoginManager(session: MockSession.sharedSession(), authorizationViewController: MockAuthorizationViewController(authorizationURL: MockSession.sharedSession().authorizationURL, redirectURL:  MockSession.sharedSession().redirectURL, withSuccess:true))
+        var isSuccess = false
+        loginManager.loginFromViewController(UIViewController(), completed: { (result) in
+          switch result {
+            case .Success():
+              isSuccess = true
+            case .Failure():
+              fail()
+          }
+          expect(isSuccess) == true
+        })
+      }
     }
   }
 }
