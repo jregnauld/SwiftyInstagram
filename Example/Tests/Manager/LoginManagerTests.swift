@@ -23,17 +23,20 @@ class LoginManagerTests: QuickSpec {
     }
     describe("it will test Login manager") {
       it(" will log in to Instagram with success") {
-        let loginManager = LoginManager(session: MockSession.sharedSession(), authorizationViewController: MockAuthorizationViewController(authorizationURL: MockSession.sharedSession().authorizationURL, redirectURL:  MockSession.sharedSession().redirectURL, withSuccess:true))
+        let authorizationViewController = MockAuthorizationViewController(authorizationURL: MockSession.sharedSession().authorizationURL, redirectURL:  MockSession.sharedSession().redirectURL)
+        let loginManager = LoginManager(session: MockSession.sharedSession(), authorizationViewController: authorizationViewController)
         var isSuccess = false
-        loginManager.loginFromViewController(UIViewController(), completed: { (result) in
-          switch result {
+          loginManager.loginFromViewController(UIViewController(), completed: { (result) in
+            switch result {
             case .Success():
               isSuccess = true
             case .Failure():
               fail()
-          }
-          expect(isSuccess) == true
-        })
+            }
+          })
+        authorizationViewController.successAnswer()
+        expect(isSuccess) == true
+        expect(MockSession.sharedSession().getAccessToken()) != nil
       }
     }
   }

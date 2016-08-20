@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 import WebKit
-protocol AuthorizationDelegate {
+public protocol AuthorizationDelegate {
   func getWebViewAnswer(url:NSURL)
 }
 public class AuthorizationViewController: UIViewController, WKNavigationDelegate {
   let webView: WKWebView = WKWebView()
   let request: NSURLRequest
-  var delegate: AuthorizationDelegate?
+  public var delegate: AuthorizationDelegate?
   public init(_ coder: NSCoder? = nil, authorizationURL: NSURL) {
     self.request = NSURLRequest(URL: authorizationURL)
     if let coder = coder {

@@ -23,16 +23,26 @@ public class LoginManager: AuthorizationDelegate {
     } else {
       self._authorizationViewController = AuthorizationViewController(authorizationURL: self._session.authorizationURL)
     }
+    self._authorizationViewController.delegate = self
   }
   public func loginFromViewController(viewController: UIViewController, completed: InstagramAuthorizationHandler) {
-    self._authorizationViewController.delegate = self
     self._authorizationHandler = completed
     let navigationController = UINavigationController(rootViewController: self._authorizationViewController)
     viewController.presentViewController(navigationController, animated: true, completion: nil)
   }
-  func getWebViewAnswer(url: NSURL) {
-    //if url != authorization && access token dans url
-    // error nsurlcomponent a error_reason, error, error_descption
-//    self._authorizationHandler!(result: .Success())
+  public func getWebViewAnswer(url: NSURL) {
+    self.checkAnswer(url) { (result) in
+      self._authorizationHandler!(result: result)
+    }
+  }
+  func checkAnswer(url:NSURL, completed: InstagramAuthorizationHandler) {
+    let key = "access_token="
+    if url.absoluteString.rangeOfString(key) != nil {
+      guard let accessToken = url.absoluteString.componentsSeparatedByString(key).reverse().first else {
+        return
+      }
+      self._session.accessToken = accessToken
+      completed(result: .Success())
+    }
   }
 }

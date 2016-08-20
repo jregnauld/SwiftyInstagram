@@ -28,6 +28,9 @@ public class Session {
   public init(configuration: Configuration) {
     self.configuration = configuration
   }
+  public func getAccessToken() -> String? {
+    return self.accessToken
+  }
   public class func setupSharedSessionWithConfiguration(configuration: Configuration) {
     if _sharedSession == nil {
       _sharedSession = Session(configuration: configuration)
