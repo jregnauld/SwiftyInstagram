@@ -36,10 +36,21 @@ public class AuthorizationViewController: UIViewController, WKNavigationDelegate
     self.webView.navigationDelegate = self
     self.webView.translatesAutoresizingMaskIntoConstraints = false
     self.view.addSubview(self.webView)
-    self.webView.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
-    self.webView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
-    self.webView.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
-    self.webView.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
+    if #available(iOS 9.0, *) {
+      self.webView.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
+      self.webView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
+      self.webView.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
+      self.webView.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
+    } else {
+      // Fallback on earlier versions
+      let views = ["webView": self.webView]
+      let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[webView]|",
+                                                                               options: [], metrics: nil, views: views)
+      let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[webView]|",
+                                                                               options: [], metrics: nil, views: views)
+      NSLayoutConstraint.activateConstraints([verticalConstraints, horizontalConstraints].flatMap {$0})
+    }
+   
   }
   public func webView(webView: WKWebView, didCommitNavigation navigation: WKNavigation!) {
     print("didCommitNavigation")
