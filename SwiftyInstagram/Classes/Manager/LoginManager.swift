@@ -10,7 +10,7 @@ import Foundation
 public typealias InstagramAuthorizationHandler = ((result: AuthorizationResult) -> Void)
 public enum AuthorizationResult {
   case Success()
-  case Failure()
+  case Failure(error: ErrorType)
 }
 public class LoginManager: AuthorizationDelegate {
   private let _session: Session
@@ -36,13 +36,15 @@ public class LoginManager: AuthorizationDelegate {
     }
   }
   func checkAnswer(url:NSURL, completed: InstagramAuthorizationHandler) {
-    let key = "access_token="
-    if url.absoluteString.rangeOfString(key) != nil {
-      guard let accessToken = url.absoluteString.componentsSeparatedByString(key).reverse().first else {
-        return
-      }
-      self._session.accessToken = accessToken
-      completed(result: .Success())
+    let builder = LoginAnswerBuilder(url: url)
+    switch builder.getAnswer() {
+      case is String:
+        self._session.accessToken = builder.getAnswer() as! String
+        completed(result: .Success())
+      case is Error:
+        completed(result: .Failure(error: builder.getAnswer() as! Error))
+    default: break
     }
   }
+   
 }

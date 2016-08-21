@@ -13,11 +13,14 @@ class ViewController: UIViewController {
     super.viewDidAppear(animated)
     let loginManager = LoginManager()
     loginManager.loginFromViewController(self) { (result) in
+      print(result)
+
       switch result {
       case .Success():
-        print("pouet")
         break
-      case .Failure(): break
+      case .Failure(let error):
+        print(error.reason)
+        break
       }
     }
   }

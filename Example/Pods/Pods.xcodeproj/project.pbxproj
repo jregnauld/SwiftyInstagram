@@ -118,6 +118,9 @@
 		EE6DD0F93BC7B01ACC98716003D129B7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 348E28395AC3E9B59263F66C9B316799 /* XCTest.framework */; };
 		F417E510B10A4D64D47E463ED031693D /* SwiftyInstagram-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B8DAB48B9D716D296510D32257B17A /* SwiftyInstagram-dummy.m */; };
 		F85A9207A8601CE7F835CEC56790616F /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493B90121770E22DA0C8AE43757DC827 /* Expectation.swift */; };
+		F933B9421D69B3010077362B /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933B9411D69B3010077362B /* Error.swift */; };
+		F933B9451D69B7810077362B /* NSURL+SwiftyInstagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933B9441D69B7810077362B /* NSURL+SwiftyInstagram.swift */; };
+		F933B9481D69BF380077362B /* LoginAnswerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F933B9471D69BF380077362B /* LoginAnswerBuilder.swift */; };
 		F95008171D58CA6F00307337 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95008101D58C82F00307337 /* Client.swift */; };
 		F95008181D58CA7200307337 /* SwiftyInstagramConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95008151D58CA6700307337 /* SwiftyInstagramConstants.swift */; };
 		F950081B1D58D30700307337 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95008191D58D28200307337 /* Configuration.swift */; };
@@ -310,6 +313,9 @@
 		F5FA2D428AF5721E469C17897FC776F0 /* OHHTTPStubs-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OHHTTPStubs-umbrella.h"; sourceTree = "<group>"; };
 		F605D2CC2263E264598B09EC5E6AA573 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F18E1EFE7789EEA87EE58CA4FFBB27 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F933B9411D69B3010077362B /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Domain/Error.swift; sourceTree = "<group>"; };
+		F933B9441D69B7810077362B /* NSURL+SwiftyInstagram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSURL+SwiftyInstagram.swift"; path = "Extension/NSURL+SwiftyInstagram.swift"; sourceTree = "<group>"; };
+		F933B9471D69BF380077362B /* LoginAnswerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginAnswerBuilder.swift; path = Builder/LoginAnswerBuilder.swift; sourceTree = "<group>"; };
 		F95008101D58C82F00307337 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = Domain/Client.swift; sourceTree = "<group>"; };
 		F95008151D58CA6700307337 /* SwiftyInstagramConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyInstagramConstants.swift; path = Constants/SwiftyInstagramConstants.swift; sourceTree = "<group>"; };
 		F95008191D58D28200307337 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Domain/Configuration.swift; sourceTree = "<group>"; };
@@ -432,6 +438,8 @@
 		1F2CEA0CC57BF56B649A0F1753AE99D5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F933B9461D69BF110077362B /* Builder */,
+				F933B9431D69B73D0077362B /* Extension */,
 				F97ED2821D5CBD8500A67470 /* Controller */,
 				F97ED27B1D5CBC4200A67470 /* Manager */,
 				F95008141D58CA3F00307337 /* Constants */,
@@ -704,12 +712,29 @@
 			path = "Target Support Files/Pods-SwiftyInstagram_Example";
 			sourceTree = "<group>";
 		};
+		F933B9431D69B73D0077362B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F933B9441D69B7810077362B /* NSURL+SwiftyInstagram.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		F933B9461D69BF110077362B /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				F933B9471D69BF380077362B /* LoginAnswerBuilder.swift */,
+			);
+			name = Builder;
+			sourceTree = "<group>";
+		};
 		F950080F1D58C80B00307337 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 				F95008101D58C82F00307337 /* Client.swift */,
 				F95008191D58D28200307337 /* Configuration.swift */,
 				F977151E1D5B5B1400ECE9FD /* Session.swift */,
+				F933B9411D69B3010077362B /* Error.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -1056,10 +1081,13 @@
 				F95008181D58CA7200307337 /* SwiftyInstagramConstants.swift in Sources */,
 				F97ED2811D5CBCFB00A67470 /* LoginManager.swift in Sources */,
 				F977151F1D5B5B1400ECE9FD /* Session.swift in Sources */,
+				F933B9481D69BF380077362B /* LoginAnswerBuilder.swift in Sources */,
 				F97ED2841D5CBDB400A67470 /* AuthorizationViewController.swift in Sources */,
 				F950081B1D58D30700307337 /* Configuration.swift in Sources */,
 				F417E510B10A4D64D47E463ED031693D /* SwiftyInstagram-dummy.m in Sources */,
+				F933B9421D69B3010077362B /* Error.swift in Sources */,
 				F950081D1D58D45500307337 /* Scope.swift in Sources */,
+				F933B9451D69B7810077362B /* NSURL+SwiftyInstagram.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
