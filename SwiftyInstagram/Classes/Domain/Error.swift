@@ -14,10 +14,10 @@ public protocol ErrorType {
   var description: String { get }
 }
 
-public class Error: ErrorType {
-  public let reason: String
-  public let type: String
-  public let description: String
+open class Error: ErrorType {
+  open let reason: String
+  open let type: String
+  open let description: String
   init(reason: String, type: String, description: String) {
     self.reason = reason
     self.type = type

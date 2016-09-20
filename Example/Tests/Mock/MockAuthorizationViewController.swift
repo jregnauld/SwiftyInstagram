@@ -10,12 +10,12 @@ import Foundation
 import SwiftyInstagram
 
 class MockAuthorizationViewController : AuthorizationViewController {
-  let successURL: NSURL
-  let failureURL: NSURL
-  let fakeAuthorizationURL: NSURL
-  init(authorizationURL: NSURL, redirectURL: String) {
-    self.successURL = NSURL(string: redirectURL + "/#access_token=357230059.d19d478.0b0ec3f4ecb0450fa9c7d41821ec68a9")!
-    self.failureURL = NSURL(string: redirectURL + "/?error_reason=user_denied&error=access_denied&error_description=The+user+denied+your+request.")!
+  let successURL: URL
+  let failureURL: URL
+  let fakeAuthorizationURL: URL
+  init(authorizationURL: URL, redirectURL: String) {
+    self.successURL = URL(string: redirectURL + "/#access_token=357230059.d19d478.0b0ec3f4ecb0450fa9c7d41821ec68a9")!
+    self.failureURL = URL(string: redirectURL + "/?error_reason=user_denied&error=access_denied&error_description=The+user+denied+your+request.")!
     self.fakeAuthorizationURL = authorizationURL
     super.init(authorizationURL: authorizationURL)
   }
@@ -24,7 +24,7 @@ class MockAuthorizationViewController : AuthorizationViewController {
   }
   override func viewDidLoad() {   
   }
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
   }
   func successAnswer() {
     self.delegate?.getWebViewAnswer(self.successURL)

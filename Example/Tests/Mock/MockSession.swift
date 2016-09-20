@@ -16,7 +16,7 @@ class TwiceSession: Session {
     self.calledTwice = false
     super.init(configuration: configuration)
   }
-  override class func setupSharedSessionWithConfiguration(configuration: Configuration) {
+  override class func setupSharedSessionWithConfiguration(_ configuration: Configuration) {
     if _twiceSharedSession == nil {
       _twiceSharedSession = TwiceSession(configuration: configuration)
     } else {
@@ -35,7 +35,7 @@ class EmtpyMockSession: Session {
     self.emptySharedSession = false
     super.init(configuration: configuration)
   }
-  override class func setupSharedSessionWithConfiguration(configuration: Configuration) {
+  override class func setupSharedSessionWithConfiguration(_ configuration: Configuration) {
   }
   override class func sharedSession()-> Session {
     guard _emptySharedSession != nil else {
@@ -49,7 +49,7 @@ class EmtpyMockSession: Session {
 private var _mockSharedSession: Session?
 
 class MockSession: Session {
-  override class func setupSharedSessionWithConfiguration(configuration: Configuration) {
+  override class func setupSharedSessionWithConfiguration(_ configuration: Configuration) {
     _mockSharedSession = Session(configuration: configuration)
   }
   override class func sharedSession()-> Session {

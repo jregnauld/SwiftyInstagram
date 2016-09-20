@@ -9,16 +9,16 @@
 import UIKit
 import SwiftyInstagram
 class ViewController: UIViewController {
-  override func viewDidAppear(animated: Bool) {
+  override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     let loginManager = LoginManager()
     loginManager.loginFromViewController(self) { (result) in
       print(result)
 
       switch result {
-      case .Success():
+      case .success():
         break
-      case .Failure(let error):
+      case .failure(let error):
         print(error.reason)
         break
       }

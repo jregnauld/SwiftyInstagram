@@ -7,15 +7,15 @@
 //
 
 import Foundation
-public typealias InstagramAuthorizationHandler = ((result: AuthorizationResult) -> Void)
+public typealias InstagramAuthorizationHandler = ((_ result: AuthorizationResult) -> Void)
 public enum AuthorizationResult {
-  case Success()
-  case Failure(error: ErrorType)
+  case success()
+  case failure(error: Error)
 }
-public class LoginManager: AuthorizationDelegate {
-  private let _session: Session
-  private let _authorizationViewController: AuthorizationViewController
-  private var _authorizationHandler: InstagramAuthorizationHandler?
+open class LoginManager: AuthorizationDelegate {
+  fileprivate let _session: Session
+  fileprivate let _authorizationViewController: AuthorizationViewController
+  fileprivate var _authorizationHandler: InstagramAuthorizationHandler?
   public init(session: Session = Session.sharedSession(), authorizationViewController: AuthorizationViewController? = nil) {
     self._session = session
     if let authorizationViewController = authorizationViewController {
@@ -25,24 +25,24 @@ public class LoginManager: AuthorizationDelegate {
     }
     self._authorizationViewController.delegate = self
   }
-  public func loginFromViewController(viewController: UIViewController, completed: InstagramAuthorizationHandler) {
+  open func loginFromViewController(_ viewController: UIViewController, completed: @escaping InstagramAuthorizationHandler) {
     self._authorizationHandler = completed
     let navigationController = UINavigationController(rootViewController: self._authorizationViewController)
-    viewController.presentViewController(navigationController, animated: true, completion: nil)
+    viewController.present(navigationController, animated: true, completion: nil)
   }
-  public func getWebViewAnswer(url: NSURL) {
+  open func getWebViewAnswer(_ url: URL) {
     self.checkAnswer(url) { (result) in
-      self._authorizationHandler!(result: result)
+      self._authorizationHandler!(result)
     }
   }
-  func checkAnswer(url:NSURL, completed: InstagramAuthorizationHandler) {
+  func checkAnswer(_ url:URL, completed: InstagramAuthorizationHandler) {
     let builder = LoginAnswerBuilder(url: url)
     switch builder.getAnswer() {
       case is String:
         self._session.accessToken = builder.getAnswer() as! String
-        completed(result: .Success())
+        completed(.success())
       case is Error:
-        completed(result: .Failure(error: builder.getAnswer() as! Error))
+        completed(.failure(error: builder.getAnswer() as! Error))
     default: break
     }
   }

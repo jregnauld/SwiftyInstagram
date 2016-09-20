@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 import WebKit
 public protocol AuthorizationDelegate {
-  func getWebViewAnswer(url:NSURL)
+  func getWebViewAnswer(_ url:URL)
 }
-public class AuthorizationViewController: UIViewController, WKNavigationDelegate {
+open class AuthorizationViewController: UIViewController, WKNavigationDelegate {
   let webView: WKWebView = WKWebView()
-  let request: NSURLRequest
-  public var delegate: AuthorizationDelegate?
-  public init(_ coder: NSCoder? = nil, authorizationURL: NSURL) {
-    self.request = NSURLRequest(URL: authorizationURL)
+  let request: URLRequest
+  open var delegate: AuthorizationDelegate?
+  public init(_ coder: NSCoder? = nil, authorizationURL: URL) {
+    self.request = URLRequest(url: authorizationURL)
     if let coder = coder {
       super.init(coder: coder)!
     } else {
@@ -27,43 +27,43 @@ public class AuthorizationViewController: UIViewController, WKNavigationDelegate
   required public init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  override public func viewDidAppear(animated: Bool) {
+  override open func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    self.webView.loadRequest(request)
+    self.webView.load(request)
   }
-  override public func viewDidLoad() {
+  override open func viewDidLoad() {
     super.viewDidLoad()
     self.webView.navigationDelegate = self
     self.webView.translatesAutoresizingMaskIntoConstraints = false
     self.view.addSubview(self.webView)
     if #available(iOS 9.0, *) {
-      self.webView.topAnchor.constraintEqualToAnchor(view.topAnchor).active = true
-      self.webView.bottomAnchor.constraintEqualToAnchor(view.bottomAnchor).active = true
-      self.webView.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
-      self.webView.rightAnchor.constraintEqualToAnchor(view.rightAnchor).active = true
+      self.webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+      self.webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+      self.webView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+      self.webView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     } else {
       // Fallback on earlier versions
       let views = ["webView": self.webView]
-      let verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[webView]|",
+      let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[webView]|",
                                                                                options: [], metrics: nil, views: views)
-      let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[webView]|",
+      let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[webView]|",
                                                                                options: [], metrics: nil, views: views)
-      NSLayoutConstraint.activateConstraints([verticalConstraints, horizontalConstraints].flatMap {$0})
+      NSLayoutConstraint.activate([verticalConstraints, horizontalConstraints].flatMap {$0})
     }
    
   }
-  public func webView(webView: WKWebView, didCommitNavigation navigation: WKNavigation!) {
+  open func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
     print("didCommitNavigation")
   }
-  public func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
+  open func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
     print("didFinishNavigation")
   }
-  public func webView(webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
-    if let url = webView.URL {
+  open func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+    if let url = webView.url {
       self.getWebViewURL(url)
     }
   }
-  public func getWebViewURL(url: NSURL) {
+  open func getWebViewURL(_ url: URL) {
     self.delegate?.getWebViewAnswer(url)
   }
 }

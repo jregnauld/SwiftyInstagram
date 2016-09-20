@@ -28,10 +28,10 @@ class LoginManagerTests: QuickSpec {
         var isSuccess = false
           loginManager.loginFromViewController(UIViewController(), completed: { (result) in
             switch result {
-            case .Success():
-              isSuccess = true
-            case .Failure(_):
-              fail()
+              case .success():
+                isSuccess = true
+              case .failure(_):
+                fail()
             }
           })
         authorizationViewController.successAnswer()
@@ -44,9 +44,9 @@ class LoginManagerTests: QuickSpec {
         var isFailure = false
         loginManager.loginFromViewController(UIViewController(), completed: { (result) in
           switch result {
-          case .Success():
+          case .success():
             fail()
-          case .Failure(let error):
+          case .failure(let error):
             expect(error.type) == "access_denied"
             expect(error.reason) == "user_denied"
             expect(error.description) == "The+user+denied+your+request."
@@ -64,9 +64,9 @@ class LoginManagerTests: QuickSpec {
         loginManager.loginFromViewController(UIViewController(), completed: { (result) in
           hasCheckURL = true
           switch result {
-          case .Success():
+          case .success():
             fail()
-          case .Failure(_):
+          case .failure(_):
             fail()
           }
         })
